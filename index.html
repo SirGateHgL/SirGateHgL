@@ -1,1 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIRGATE Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
 
+        .header {
+            text-align: center;
+            padding: 50px;
+            background-color: #1f1f1f;
+            border-bottom: 2px solid #ffffff;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            color: #f5f5f5;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            color: #cfcfcf;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .skills, .about, .projects, .contact {
+            margin-bottom: 50px;
+        }
+
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills li {
+            background-color: #2c2c2c;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .skills li:hover {
+            background-color: #3d3d3d;
+            transform: scale(1.05);
+        }
+
+        .about p {
+            background-color: #2c2c2c;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .project-grid {
+            display: flex;
+            gap: 20px;
+        }
+
+        .project {
+            flex: 1;
+            background-color: #2c2c2c;
+            padding: 20px;
+            border-radius: 5px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact input, .contact textarea {
+            background-color: #1f1f1f;
+            color: #ffffff;
+            border: 1px solid #3d3d3d;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .contact button {
+            background-color: #3d3d3d;
+            color: #ffffff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact button:hover {
+            background-color: #4a4a4a;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1f1f1f;
+            border-top: 2px solid #ffffff;
+        }
+
+        footer p {
+            margin: 0;
+            color: #cfcfcf;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to SIRGATE's Portfolio</h1>
+        <p>I am a programmer born in 2010, mastering Lua, Node.js, Python, C++, C#, and Golang.</p>
+    </div>
+    
+    <div class="content">
+        <section class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Lua</li>
+                <li>Node.js</li>
+                <li>Python</li>
+                <li>C++</li>
+                <li>C#</li>
+                <li>Golang</li>
+            </ul>
+        </section>
+
+        <section class="about">
+            <h2>About Me</h2>
+            <p>I'm a passionate developer focused on writing clean and efficient code. With experience across various programming languages, I enjoy tackling challenging problems and constantly learning new technologies.</p>
+        </section>
+
+        <section class="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project">
+                    <h3>Project 1</h3>
+                    <p>A brief description of the project.</p>
+                </div>
+                <div class="project">
+                    <h3>Project 2</h3>
+                    <p>A brief description of the project.</p>
+                </div>
+                <div class="project">
+                    <h3>Project 3</h3>
+                    <p>A brief description of the project.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <h2>Contact</h2>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 SIRGATE. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Menambahkan interaksi hover untuk proyek
+        document.querySelectorAll('.project').forEach(item => {
+            item.addEventListener('mouseover', () => {
+                item.style.boxShadow = '0px 15px 25px rgba(0, 0, 0, 0.7)';
+            });
+            item.addEventListener('mouseout', () => {
+                item.style.boxShadow = 'none';
+            });
+        });
+
+        // Menambahkan efek hover pada skill items
+        document.querySelectorAll('.skills li').forEach(item => {
+            item.addEventListener('mouseover', () => {
+                item.style.transform = 'scale(1.1)';
+                item.style.backgroundColor = '#4a4a4a';
+            });
+            item.addEventListener('mouseout', () => {
+                item.style.transform = 'scale(1)';
+                item.style.backgroundColor = '#2c2c2c';
+            });
+        });
+    </script>
+</body>
+</html>
