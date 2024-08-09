@@ -1,0 +1,14 @@
+{
+  "name": "sirgates-portfolio",
+  "version": "1.0.0",
+  "description": "SIRGATE's personal portfolio showcasing skills and projects.",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve -s ."
+  },
+  "author": "SIRGATE",
+  "license": "MIT",
+  "dependencies": {
+    "serve": "^14.0.1"
+  }
+}
